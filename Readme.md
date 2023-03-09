@@ -1,4 +1,10 @@
-GrpahQl data types
+A todo application which built in nodejs. It use to perform basic graphql CRUD operation. Backed with mongoDb<br/>
+### Technical Stack<br/>
+Graphql [https://graphql.org/]<br/>
+Express <br/>
+Applo express [https://www.npmjs.com/package/apollo-server-express]<br/>
+
+### GrpahQl data types<br/>
 Scaler
     Int
     String
