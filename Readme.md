@@ -17,3 +17,12 @@ Query
     The Query type is a special object type that defines all of the top-level entry points for queries that clients execute against your server.
 Mutation 
     The Mutation type is similar in structure and purpose to the Query type. Whereas the Query type defines entry points for read operations, the Mutation type defines entry points for write operations.
+
+### How to run project 
+take project clone
+go to the server directory using command line
+**run npm start**
+it will fire a server on port 3000
+than go to the localhost://3000 into development mode
+
+to run test case run npm test

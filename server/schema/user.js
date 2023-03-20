@@ -1,16 +1,31 @@
-let users = require('../data/user.json');
+const User = require("../models/User")
 module.exports = {
     Query: {
-        getUsers: () => {
-            return users;
+        getUsers: async () => {
+            try {
+                let users = await User.find()
+                return users;
+            } catch (error) {
+                throw new Error(error)
+            }
         },
         getUser: (parent, args, contextValue, info) => {
-            console.log(parent, args, contextValue, info)
-            return users.find((val) => { return val.id == parseInt(args.id) })
+            try {
+                console.log(parent, args, contextValue, info)
+                return users.find((val) => { return val.id == parseInt(args.id) })
+            } catch (error) {
+                throw new Error(error)
+            }
         },
     }, Mutation: {
-        createUser: (parent, args) => {
-            console.log("args", args)
+        createUser: async (parent, args) => {
+            try {
+                console.log("args", args)
+                let user = new User(args.input);
+                await user.save();
+            } catch (error) {
+                throw new Error(error)
+            }
         }
     }
 }

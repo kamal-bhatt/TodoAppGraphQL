@@ -43,12 +43,18 @@ const typeDefs = gql`
   input createUserInput {
     name: String!
     username: String!
-    email: String
+    email: String!
     phone:String
     website:String
   }
+  input createPostInput {
+    email:String!
+    title:String!
+    body:String!
+  }
   type Mutation {
     createUser(input:createUserInput!):User!
+    savePost(input:createPostInput!):Post!
   }
 `;
 module.exports = typeDefs;
