@@ -1,8 +1,9 @@
-A todo application which built in nodejs. It use to perform basic graphql CRUD operation. Backed with mongoDb<br/>
+A todo application which built in nodejs. It use to perform basic graphql CRUD operation.<br/>
 ### Technical Stack<br/>
 Graphql [https://graphql.org/]<br/>
 Express <br/>
 Applo express [https://www.npmjs.com/package/apollo-server-express]<br/>
+MongoDB
 
 ### GrpahQl data types<br/>
 Scaler
